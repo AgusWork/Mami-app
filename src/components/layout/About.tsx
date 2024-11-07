@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Section from "./Section";
 import { Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
 const playFair = Playfair_Display({
 	subsets: ["latin"],
@@ -30,10 +31,10 @@ export default function About() {
 				}}
 			></div>
 
-			<Section className="relative z-10 flex flex-row items-center justify-center space-x-10 mx-auto p-8">
+			<Section style={{zIndex:2}} className="relative  flex flex-row items-center justify-center space-x-10 mx-auto p-8">
 				{/* Contenido de la sección */}
-				<div id="acerca-de-mi" className="aspect-square rounded-full overflow-hidden w-[50%]">
-					<img src="./Norma.jpeg" alt="Norma" className="object-cover w-full h-full" />
+				<div id="acerca-de-mi" className="aspect-square relative rounded-full overflow-hidden w-[50%]">
+					<Image src="/Norma.jpeg" alt="Norma" fill  />
 				</div>
 				<div className="space-y-4 text-center flex flex-col items-center w-[50%]">
 					<h2 className={`${playFair.className} text-3xl font-bold text-white`}>Acerca de Norma</h2>
