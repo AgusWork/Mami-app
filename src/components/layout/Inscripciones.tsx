@@ -1,18 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Section from "./Section";
-import { Playfair_Display, Roboto_Slab } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Input } from "../ui/input";
 
 const playFair = Playfair_Display({
 	subsets: ["latin"],
 	weight: ["400", "500", "600", "700"],
 	style: ["normal", "italic"],
-	display: "swap",
-});
-
-const robotoSlab = Roboto_Slab({
-	subsets: ["latin"],
-	weight: ["300", "400", "700"],
 	display: "swap",
 });
 
