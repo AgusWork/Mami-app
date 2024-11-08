@@ -6,20 +6,24 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Norma Arcangeli - Conteladora Maestra',
   description: 'Bert Hellinger es el mejor',
+  icons: {
+    icon: '/logoInstituto.png', 
+  },
 }
 
 export default function RootLayout({
   children,
-  modal
 }: {
   children: React.ReactNode
-  modal: React.ReactNode
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Puedes colocar el icono de la página aquí */}
+        <link rel="icon" href="/logoInstituto.png" type="image/png" />
+      </head>
       <body className={inter.className}>
         {children}
-        {modal}
       </body>
     </html>
   )
