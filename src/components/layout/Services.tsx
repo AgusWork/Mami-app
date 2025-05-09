@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Section from "./Section";
 import { Playfair_Display } from "next/font/google";
 
 const playFair = Playfair_Display({
@@ -29,7 +28,7 @@ export default function Services() {
   ];
 
   return (
-    <Section className="space-y-6 max-w-full flex flex-col items-center px-4">
+    <div className="space-y-6 max-w-full flex flex-col items-center px-[5vw] lg:px-[10vw] py-20">
       <div id="Servicios" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
         {services.map((service) => (
           <div
@@ -45,6 +44,6 @@ export default function Services() {
           </div>
         ))}
       </div>
-    </Section>
+    </div>
   );
 }

@@ -1,33 +1,35 @@
-import VideoHero from "../ui/video";
-import { Playfair_Display } from "next/font/google";
+"use client";
 import SubHeader from "../ui/subHeader";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const playFair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+const carouselImages = [
+  { src: "/const1.jpg", alt: "First slide" },
+  { src: "/const4.jpg", alt: "Second slide" },
+  { src: "/const3.jpg", alt: "Third slide" },
+];
 
 export default function Header() {
   return (
-    <div className="relative">
-      <div className="relative h-screen overflow-hidden">
-        <VideoHero />
+    <div className="">
+      <div className="w-full h-full overflow-hidden">
         <div className="relative z-10 h-full flex flex-col">
           <SubHeader />
-          <div className="flex-grow flex items-center justify-center text-white px-4 mb-20 md:mb-40">
-            <div className="text-center">
-              <h1
-                className={`${playFair.className} text-3xl sm:text-5xl md:text-9xl font-bold mb-4 text-shadow-lg`}
-              >
-                Norma Arcangeli
-              </h1>
-              <div className="border border-white mb-4"></div>
-              <p className={`${playFair.className} text-lg sm:text-xl md:text-3xl mb-6 md:mb-8 text-shadow-xl`}>
-                Directora de Nuevas Constelaciones Familiares Punilla
-              </p>
-            </div>
+          <div className="w-full h-[75vh] mt-[15vh] 4xl:mt-[10vh] text-white mb-10">
+            <Carousel style={{height:"75vh"}} className="w-full relative carousel-container">
+              {carouselImages.map((image, index) => (
+                <Carousel.Item key={index} className="carousel-item-container h-full">
+                  <div className="carousel-image-container">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      draggable="false"
+                      className="carousel-image"
+                    />
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>

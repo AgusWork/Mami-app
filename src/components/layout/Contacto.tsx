@@ -8,7 +8,7 @@ export default function Contacto() {
 			<div className=" px-10 pt-10 ">
 				<div className="">
 					<h3 className="text-xl font-bold mb-2 text-white">NORMA ARCANGELI</h3>
-					<p className="text-white">Directora de Nuevas Constelaciones Familiares Punilla</p>
+					<p className="text-white">Directora del Instituto de Nuevas Constelaciones Familiares Punilla</p>
 				</div>
 				<div className="grid  my-14">
 					<div>

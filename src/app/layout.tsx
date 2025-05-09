@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Puedes colocar el icono de la página aquí */}
         <link rel="icon" href="/logoInstituto.png" type="image/png" />
       </head>
       <body className={inter.className}>
